@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="editTextCompleted">
+        <attr name="title" format="string" />
+        <attr name="errorMessage" format="string" />
+        <attr name="normalBackground" format="reference" />
+        <attr name="errorBackground" format="reference" />
+    </declare-styleable>
+</resources>

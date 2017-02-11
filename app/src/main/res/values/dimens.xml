@@ -1,0 +1,32 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 出现较少 -->
+    <dimen name="t1">30sp</dimen>
+
+    <!-- 出现较少 -->
+    <dimen name="t2">23sp</dimen>
+
+    <!-- 导航栏标题 -->
+    <dimen name="t3">18sp</dimen>
+
+    <!-- 导航栏右侧按钮 -->
+    <dimen name="t4">16sp</dimen>
+
+    <!-- 正文 -->
+    <dimen name="t5">15sp</dimen>
+
+    <!-- 正文辅助 -->
+    <dimen name="t6">14sp</dimen>
+
+    <!-- 提示文案 -->
+    <dimen name="t7">13sp</dimen>
+
+    <!--  -->
+    <dimen name="t8">12sp</dimen>
+
+    <!-- 菜单栏文字 -->
+    <dimen name="t9">10sp</dimen>
+</resources>

@@ -1,0 +1,3 @@
+include ':app', ':javatest'
+include ':rocooFix'
+project(':rocooFix').projectDir = new File('../RocooFix/rocoo')

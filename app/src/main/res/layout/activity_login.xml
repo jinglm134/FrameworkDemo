@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:background="@color/c12"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="账号："
+            android:textColor="@color/c6"
+            android:textSize="@dimen/t3" />
+
+        <frameworkdemo.com.jlm.frameworkdemo.view.ClearableEditTextWithIcon
+            android:id="@+id/cet_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@null"
+            android:textColor="@color/c2" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c8" />
+
+    <LinearLayout
+        android:background="@color/c12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="密码："
+            android:textColor="@color/c6"
+            android:textSize="@dimen/t3" />
+
+        <frameworkdemo.com.jlm.frameworkdemo.view.ClearableEditTextWithIcon
+            android:id="@+id/cet_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:background="@null"
+            android:paddingTop="10dp"
+            android:textColor="@color/c2" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c8" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/c2"
+        android:text="登录"
+        android:textColor="@color/c14"
+        android:textSize="@dimen/t2"/>
+</LinearLayout>
