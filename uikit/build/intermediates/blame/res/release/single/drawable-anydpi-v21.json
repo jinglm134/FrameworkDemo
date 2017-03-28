@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.3.0\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.3.0\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    }
+]

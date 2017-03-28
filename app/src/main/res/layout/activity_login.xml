@@ -75,4 +75,16 @@
         android:text="登录"
         android:textColor="@color/c14"
         android:textSize="@dimen/t2"/>
+
+    <Button
+        android:id="@+id/btn_chat"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/c2"
+        android:text="聊天"
+        android:textColor="@color/c14"
+        android:textSize="@dimen/t2"/>
 </LinearLayout>

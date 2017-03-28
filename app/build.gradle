@@ -11,16 +11,18 @@ android {
             storePassword CONFIG_STORE_PASSWORD
         }
     }
-    compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "frameworkdemo.com.jlm.frameworkdemo"
         minSdkVersion 16
-        targetSdkVersion 24
+        targetSdkVersion 25
+
+        multiDexEnabled true
 
         ndk {
             //设置支持的SO库架构
-            abiFilters "armeabi-v7a", "x86","arm64-v8a","x86_64"
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
     }
     buildTypes {
@@ -45,7 +47,7 @@ rocoo_fix {
 
     enable = true//注意：关掉此项会无法生成Hash.txt文件
 
-    scanref=true//默认为 false，开启这个选项会将与补丁 class 相引用的 class 都打入包中来解决 ART 虚拟机崩溃问题，功能 Beta 中
+    scanref = true//默认为 false，开启这个选项会将与补丁 class 相引用的 class 都打入包中来解决 ART 虚拟机崩溃问题，功能 Beta 中
 }
 
 
@@ -57,7 +59,9 @@ tasks.whenTaskAdded { task ->
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:recyclerview-v7:25.3.0'
+    compile 'com.android.support:design:25.3.0'
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.jakewharton:butterknife:8.4.0'
@@ -69,22 +73,21 @@ dependencies {
     compile 'com.yalantis:ucrop:2.2.0-native'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'net.jokubasdargis.rxbus:rxbus:1.2.0'
-    compile 'com.github.orolle:smc-lib-rxjava:6.4.0_rx_b1'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.yanzhenjie:album:1.0.0'
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:recyclerview-v7:24.2.1'
-    compile 'com.android.support:design:24.2.1'
-    compile project(':rocooFix')
+    compile "com.android.support:multidex:1.0.1"
+    compile project(path: ':uikit')
 
     // 基础功能 (必需)
-    compile 'com.netease.nimlib:basesdk:3.3.0'
-    // 音视频需要
-    compile 'com.netease.nimlib:avchat:3.3.0'
-    // 聊天室需要
-    compile 'com.netease.nimlib:chatroom:3.3.0'
-    // 实时会话服务需要
-    compile 'com.netease.nimlib:rts:3.3.0'
-    // 全文检索服务需要
-    compile 'com.netease.nimlib:lucene:3.3.0'
+//    compile 'com.netease.nimlib:basesdk:3.3.0'
+//    // 音视频需要
+//    compile 'com.netease.nimlib:avchat:3.3.0'
+//    // 聊天室需要
+//    compile 'com.netease.nimlib:chatroom:3.3.0'
+//    // 实时会话服务需要
+//    compile 'com.netease.nimlib:rts:3.3.0'
+//    // 全文检索服务需要
+//    compile 'com.netease.nimlib:lucene:3.3.0'
 }
+
+
