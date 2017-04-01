@@ -4,11 +4,8 @@ apply plugin: 'com.dodola.rocoofix'
 
 android {
     signingConfigs {
-        config {
-            keyAlias CONFIG_KEY_ALIAS
-            keyPassword CONFIG_KEY_PASSWORD
-            storeFile file(CONFIG_STORE_FILE)
-            storePassword CONFIG_STORE_PASSWORD
+        keystore_config {
+            storeFile file('F:/keystore/fed.keystore.jks')
         }
     }
     compileSdkVersion 25
@@ -65,7 +62,6 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.jakewharton:butterknife:8.4.0'
-    apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'jp.wasabeef:glide-transformations:1.0.0'
     compile 'it.sephiroth.android.library.picasso:picasso:2.5.2.4b'
@@ -75,19 +71,10 @@ dependencies {
     compile 'net.jokubasdargis.rxbus:rxbus:1.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.yanzhenjie:album:1.0.0'
-    compile "com.android.support:multidex:1.0.1"
-    compile project(path: ':uikit')
-
-    // 基础功能 (必需)
-//    compile 'com.netease.nimlib:basesdk:3.3.0'
-//    // 音视频需要
-//    compile 'com.netease.nimlib:avchat:3.3.0'
-//    // 聊天室需要
-//    compile 'com.netease.nimlib:chatroom:3.3.0'
-//    // 实时会话服务需要
-//    compile 'com.netease.nimlib:rts:3.3.0'
-//    // 全文检索服务需要
-//    compile 'com.netease.nimlib:lucene:3.3.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:support-v4:25.3.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
 }
 
 

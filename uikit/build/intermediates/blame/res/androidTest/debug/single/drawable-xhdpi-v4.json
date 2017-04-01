@@ -128,12 +128,12 @@
         "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.3.0\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\nim_location_bk.png",
-        "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_location_bk.png"
-    },
-    {
         "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\nim_audio_animation_list_left_3.png",
         "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_audio_animation_list_left_3.png"
+    },
+    {
+        "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\nim_location_bk.png",
+        "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_location_bk.png"
     },
     {
         "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\abc_list_focused_holo.9.png",
@@ -224,12 +224,12 @@
         "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_picker_preview_disable.png"
     },
     {
-        "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\nim_ic_trans_fail.png",
-        "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_ic_trans_fail.png"
-    },
-    {
         "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\nim_avatar_group.png",
         "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_avatar_group.png"
+    },
+    {
+        "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\nim_ic_trans_fail.png",
+        "source": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nim_ic_trans_fail.png"
     },
     {
         "merged": "F:\\my_project\\FrameworkDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\nim_message_input_voice_normal.png",

@@ -64,7 +64,7 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.button5)
     public void onClickUtilTest() {
-        startActivity(new Intent(this, ActivityUtilsTest.class));
+        startActivity(new Intent(this, Main2Activity.class));
     }
 
     @OnClick(R.id.button6)

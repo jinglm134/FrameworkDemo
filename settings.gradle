@@ -1,1 +1,1 @@
-include ':app', ':javatest',':uikit'
+include ':app', ':javatest'

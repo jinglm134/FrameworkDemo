@@ -3,14 +3,9 @@ package com.example;
 public class Test {
 
     public static void main(String[] args) {
-
-        String m = "123456789abcdefghijkl";
-        String f[] = {"1", "2", "a", "df", "9", "10"};
-        for (int i = 0; i < f.length; i++) {
-            m = m.replaceAll(f[i], "*");
-            System.out.println(m);
-        }
-
+        String messageStr = "牛牛jdjsn=牛牛屌屌屌   牛牛";
+        messageStr = messageStr.replaceAll("牛牛", "**");
+        System.out.print(messageStr);
     }
 
 }
