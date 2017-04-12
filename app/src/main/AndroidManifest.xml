@@ -46,6 +46,7 @@
     <application
         android:name=".application.MyApplication"
         android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden|screenSize"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -61,16 +62,18 @@
             android:name="com.yanzhenjie.album.AlbumActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="图库"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden|stateHidden"/>
-        <activity android:name=".activity.ActivityGlideList"/>
-        <activity android:name=".activity.ActivityPhotoView"/>
-        <activity android:name=".activity.ActivityCamera"/>
+        <activity android:name=".activity.ActivityGlideList"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".activity.ActivityPhotoView"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".activity.ActivityCamera"
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity android:name=".activity.ActivityBessel"/>
         <activity android:name=".activity.ActivityUtilsTest"/>
         <activity android:name=".activity.ActivityCoordinator"/>
-        <activity android:name=".activity.LoginActivity"/>
         <activity android:name=".activity.Main2Activity"/>
+        <activity android:name=".activity.WebViewActivity"/>
     </application>
 
 </manifest>

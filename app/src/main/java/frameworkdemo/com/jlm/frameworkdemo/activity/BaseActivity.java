@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * BaseActivity
@@ -12,12 +13,12 @@ import butterknife.ButterKnife;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
-
+    private Unbinder bind;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getContentViewId());
-        ButterKnife.bind(this);
+        bind = ButterKnife.bind(this);
         initView();
     }
 
@@ -26,4 +27,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public abstract int getContentViewId();
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        bind.unbind();
+    }
 }

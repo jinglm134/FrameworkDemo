@@ -44,7 +44,7 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.button1)
     public void onClickGlide() {
-        startActivity(new Intent(this, ActivityGlideList.class));
+        startActivity(new Intent(this, WebViewActivity.class));
     }
 
     @OnClick(R.id.button2)
@@ -64,7 +64,7 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.button5)
     public void onClickUtilTest() {
-        startActivity(new Intent(this, Main2Activity.class));
+        startActivity(new Intent(this, ActivityUtilsTest.class));
     }
 
     @OnClick(R.id.button6)
@@ -74,7 +74,7 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.button7)
     public void n_IM_Login() {
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, Main2Activity.class));
     }
 
 

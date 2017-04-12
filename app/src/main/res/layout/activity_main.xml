@@ -83,7 +83,7 @@
             android:layout_height="49dp"
             android:layout_margin="10dp"
             android:background="@color/c1"
-            android:text="N_IM  LOGIN"
+            android:text="NAVIGATION_DRAWER"
             android:textColor="@color/c14"
             android:textSize="@dimen/t4" />
     </LinearLayout>

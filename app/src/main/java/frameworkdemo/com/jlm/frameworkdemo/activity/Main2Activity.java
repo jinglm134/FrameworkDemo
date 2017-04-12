@@ -1,43 +1,99 @@
 package frameworkdemo.com.jlm.frameworkdemo.activity;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.Gravity;
+import android.view.View;
 
 import frameworkdemo.com.jlm.frameworkdemo.R;
+import frameworkdemo.com.jlm.frameworkdemo.fragment.Fragment1;
+import frameworkdemo.com.jlm.frameworkdemo.fragment.Fragment2;
+import frameworkdemo.com.jlm.frameworkdemo.fragment.NavigationDrawerFragment;
 
 
-public class Main2Activity extends ActionBarActivity
-        implements NavigationDrawerCallbacks {
+public class Main2Activity extends ActionBarActivity implements NavigationDrawerCallbacks {
 
-    /**
-     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
-     */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-    private Toolbar mToolbar;
+    private DrawerLayout mDrawer;
+
+    private View contentView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
-        setSupportActionBar(mToolbar);
 
+        contentView=findViewById(R.id.container);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer);
         mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getFragmentManager().findFragmentById(R.id.fragment_drawer);
+                getSupportFragmentManager().findFragmentById(R.id.fragment_menu);
 
-        // Set up the drawer.
-        mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
+        mNavigationDrawerFragment.setup(R.id.fragment_menu,mDrawer);
+
+        // 关闭手势滑动
+        mDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, Gravity.END);
+        mDrawer.addDrawerListener(new DrawerLayout.DrawerListener() {
+            private boolean isMenu;
+
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+                isMenu = drawerView.getTag().equals("START");
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                // 打开手势滑动
+                if (!isMenu) {
+                    mDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED, Gravity.END);
+                }
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                // 关闭手势滑动
+                if (!isMenu) {
+                    mDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, Gravity.END);
+                }
+            }
+
+            @Override
+            public void onDrawerStateChanged(int newState) {
+            }
+        });
     }
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
-        Toast.makeText(this, "Menu item selected -> " + position, Toast.LENGTH_SHORT).show();
+
+        Bundle args = new Bundle();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        switch (position) {
+            case 0:
+                args.putString("key", "1");
+                Fragment1 fragment1 = new Fragment1(contentView,mDrawer);
+                fragment1.setArguments(args);
+                fragmentTransaction.replace(R.id.container, fragment1).commit();
+                break;
+            case 1:
+                args.putString("key", "2");
+
+                Fragment2 fragment2 =  new Fragment2(contentView,mDrawer);
+                fragment2.setArguments(args);
+                fragmentTransaction.replace(R.id.container, fragment2).commit();
+                break;
+            case 2:
+//                args.putString("key", "3");
+                break;
+            case 3:
+//                args.putString("key", "4");
+                break;
+            default:
+                break;
+        }
     }
 
 
@@ -45,38 +101,8 @@ public class Main2Activity extends ActionBarActivity
     public void onBackPressed() {
         if (mNavigationDrawerFragment.isDrawerOpen())
             mNavigationDrawerFragment.closeDrawer();
+
         else
             super.onBackPressed();
     }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        if (!mNavigationDrawerFragment.isDrawerOpen()) {
-            // Only show items in the action bar relevant to this screen
-            // if the drawer is not showing. Otherwise, let the drawer
-            // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.main2, menu);
-            return true;
-        }
-        return super.onCreateOptionsMenu(menu);
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-
 }
