@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/fragment_menu"
-        android:name="frameworkdemo.com.jlm.frameworkdemo.fragment.NavigationDrawerFragment"
+        android:name="frameworkdemo.com.jlm.frameworkdemo.fragment.fragmentmenu.NavigationDrawerFragment"
         android:layout_width="160dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"

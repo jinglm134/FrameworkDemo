@@ -9,32 +9,29 @@ import android.view.Gravity;
 import android.view.View;
 
 import frameworkdemo.com.jlm.frameworkdemo.R;
-import frameworkdemo.com.jlm.frameworkdemo.fragment.Fragment1;
-import frameworkdemo.com.jlm.frameworkdemo.fragment.Fragment2;
-import frameworkdemo.com.jlm.frameworkdemo.fragment.NavigationDrawerFragment;
+import frameworkdemo.com.jlm.frameworkdemo.fragment.fragmentcontent.FragmentDataService;
+import frameworkdemo.com.jlm.frameworkdemo.fragment.fragmentcontent.FragmentSeekCar;
+import frameworkdemo.com.jlm.frameworkdemo.fragment.fragmentmenu.NavigationDrawerFragment;
 
 
 public class Main2Activity extends ActionBarActivity implements NavigationDrawerCallbacks {
 
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private DrawerLayout mDrawer;
+    private FragmentDataService fragmentDataService;
+    private FragmentSeekCar fragmentSeekCar;
 
-    private View contentView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        contentView=findViewById(R.id.container);
-        mDrawer = (DrawerLayout) findViewById(R.id.drawer);
-        mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getSupportFragmentManager().findFragmentById(R.id.fragment_menu);
+        initView();
+        setListener();
+    }
 
-        mNavigationDrawerFragment.setup(R.id.fragment_menu,mDrawer);
-
-        // 关闭手势滑动
-        mDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, Gravity.END);
+    private void setListener() {
         mDrawer.addDrawerListener(new DrawerLayout.DrawerListener() {
             private boolean isMenu;
 
@@ -65,25 +62,37 @@ public class Main2Activity extends ActionBarActivity implements NavigationDrawer
         });
     }
 
+    private void initView() {
+        fragmentDataService = new FragmentDataService();
+        fragmentSeekCar =  new FragmentSeekCar();
+
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer);
+        mNavigationDrawerFragment = (NavigationDrawerFragment)
+                getSupportFragmentManager().findFragmentById(R.id.fragment_menu);
+
+        mNavigationDrawerFragment.setup(R.id.fragment_menu,mDrawer);
+
+        // 关闭手势滑动
+        mDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, Gravity.END);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentDataService).commit();
+    }
+
     @Override
     public void onNavigationDrawerItemSelected(int position) {
 
-        Bundle args = new Bundle();
+//        Bundle args = new Bundle();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         switch (position) {
             case 0:
-                args.putString("key", "1");
-                Fragment1 fragment1 = new Fragment1(contentView,mDrawer);
-                fragment1.setArguments(args);
-                fragmentTransaction.replace(R.id.container, fragment1).commit();
+                /*args.putString("key", "1");
+                fragmentDataService.setArguments(args);*/
+                fragmentTransaction.replace(R.id.container, fragmentDataService).commit();
                 break;
             case 1:
-                args.putString("key", "2");
-
-                Fragment2 fragment2 =  new Fragment2(contentView,mDrawer);
-                fragment2.setArguments(args);
-                fragmentTransaction.replace(R.id.container, fragment2).commit();
+               /* args.putString("key", "2");
+                fragmentDataServiceCarAnalysis.setArguments(args);*/
+                fragmentTransaction.replace(R.id.container, fragmentSeekCar).commit();
                 break;
             case 2:
 //                args.putString("key", "3");

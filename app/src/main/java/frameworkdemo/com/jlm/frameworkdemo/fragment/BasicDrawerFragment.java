@@ -1,5 +1,6 @@
 package frameworkdemo.com.jlm.frameworkdemo.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,7 +8,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+
+import frameworkdemo.com.jlm.frameworkdemo.R;
+import frameworkdemo.com.jlm.frameworkdemo.activity.Main2Activity;
 
 /**
  *
@@ -15,6 +18,15 @@ import android.widget.FrameLayout;
  */
 
 public class BasicDrawerFragment extends Fragment {
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if(context instanceof Main2Activity){
+            mDrawerLayout = (DrawerLayout)((Main2Activity) context).findViewById(R.id.drawer);
+            mFragmentContainerView=((Main2Activity) context).findViewById(R.id.container);
+        }
+    }
 
     protected View mFragmentContainerView;
     protected DrawerLayout mDrawerLayout;
@@ -28,14 +40,6 @@ public class BasicDrawerFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-    }
-
-    public BasicDrawerFragment() {
-    }
-
-    public BasicDrawerFragment(View fragmentContainerView, DrawerLayout drawerLayout) {
-        mFragmentContainerView = fragmentContainerView;
-        mDrawerLayout = drawerLayout;
     }
 
 }

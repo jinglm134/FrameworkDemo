@@ -1,4 +1,4 @@
-package frameworkdemo.com.jlm.frameworkdemo.fragment;
+package frameworkdemo.com.jlm.frameworkdemo.fragment.fragmentright;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

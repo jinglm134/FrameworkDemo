@@ -1,4 +1,4 @@
-package frameworkdemo.com.jlm.frameworkdemo.fragment;
+package frameworkdemo.com.jlm.frameworkdemo.fragment.fragmentmenu;
 
 import android.app.Activity;
 import android.os.Bundle;

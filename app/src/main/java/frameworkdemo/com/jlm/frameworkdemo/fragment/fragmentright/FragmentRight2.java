@@ -1,4 +1,4 @@
-package frameworkdemo.com.jlm.frameworkdemo.fragment;
+package frameworkdemo.com.jlm.frameworkdemo.fragment.fragmentright;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import frameworkdemo.com.jlm.frameworkdemo.R;
 
 /**
+ * 车系分析
  * Created by jaylim on 2017/4/12.
  */
 
