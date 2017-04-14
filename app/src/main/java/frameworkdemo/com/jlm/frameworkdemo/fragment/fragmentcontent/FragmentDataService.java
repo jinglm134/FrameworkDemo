@@ -23,6 +23,8 @@ public class FragmentDataService extends BasicDrawerFragment {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
+    private FragmentDataServiceHotExponent fragmentDataServiceHotExponent;
+    private FragmentDataServiceCarAnalysis fragmentDataServiceCarAnalysis;
     private static final String[] TITLES = {"热门指数", "车系分析"};
 
     @Nullable
@@ -35,13 +37,6 @@ public class FragmentDataService extends BasicDrawerFragment {
     }
 
     private void setListener() {
-
-        /*tv_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });*/
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -63,17 +58,22 @@ public class FragmentDataService extends BasicDrawerFragment {
 
     private void initView(View root) {
         //        tv_btn = (TextView)root.findViewById(R.id.tv_btn);
+        fragmentDataServiceHotExponent = new FragmentDataServiceHotExponent();
+        fragmentDataServiceCarAnalysis = new FragmentDataServiceCarAnalysis();
+
         MyPagerAdapter mAdapter = new MyPagerAdapter(getActivity().getSupportFragmentManager());
+
         viewPager = (ViewPager) root.findViewById(R.id.viewPager);
         tabLayout = (TabLayout) root.findViewById(R.id.tabLayout);
-//        tabLayout.addTab(new TabLayout.Tab().setText("热门指数"));
+//        tabLayout.addTab(new TabLayout(getActivity()).newTab().setText("热门指数"));
+//        tabLayout.addTab(new TabLayout(getActivity()).newTab().setText("车系分析"));
 
         viewPager.setOffscreenPageLimit(2);
         viewPager.setAdapter(mAdapter);
         //设置TabLayout的模式
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setTabsFromPagerAdapter(mAdapter);
+//        tabLayout.setTabsFromPagerAdapter(mAdapter);
     }
 
 
@@ -85,14 +85,7 @@ public class FragmentDataService extends BasicDrawerFragment {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return new FragmentDataServiceHotExponent();
-                case 1:
-                    return new FragmentDataServiceCarAnalysis();
-                default:
-                   return null;
-            }
+            return position == 0 ? fragmentDataServiceHotExponent : fragmentDataServiceCarAnalysis;
         }
 
         @Override

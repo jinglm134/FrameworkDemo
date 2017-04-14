@@ -25,7 +25,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:tag="END"
-        android:background="@color/c12">
+        android:clickable="true"
+        android:background="@color/c12"/>
 
-    </FrameLayout>
 </android.support.v4.widget.DrawerLayout>

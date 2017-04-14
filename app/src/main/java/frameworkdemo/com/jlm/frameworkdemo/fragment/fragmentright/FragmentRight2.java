@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import frameworkdemo.com.jlm.frameworkdemo.R;
+import lecho.lib.hellocharts.view.ColumnChartView;
 
 /**
  * 车系分析
@@ -15,10 +16,19 @@ import frameworkdemo.com.jlm.frameworkdemo.R;
  */
 
 public class FragmentRight2 extends Fragment {
+
+//    private ColumnChartView columnChartView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_right_2, container, false);
+        View view = inflater.inflate(R.layout.fragment_right_2, container, false);
+        init(view);
+        return view;
+    }
+
+    private void init(View view) {
+//        columnChartView=(ColumnChartView)view.findViewById(R.id.columnChartView);
     }
 
 }

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <TextView
@@ -11,4 +12,23 @@
         android:text="fragment1右侧"
         android:padding="10dp"
         />
+
+    <frameworkdemo.com.jlm.frameworkdemo.view.barchart.BarChart
+        android:id="@+id/barChat"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:padding="20dp"
+        app:egFixedBarWidth="true"
+        app:egBarWidth="20dp"
+        app:egLegendHeight="30dp"
+        app:egVisibleBars="5"
+        app:egLegendTextSize="@dimen/t9"
+        app:egLegendColor="@color/c1"
+        app:egShowValues="false"/>
+
+    <lecho.lib.hellocharts.view.ColumnChartView
+        android:layout_marginTop="20dp"
+        android:id="@+id/columnChartView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp" />
 </LinearLayout>

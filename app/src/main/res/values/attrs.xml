@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FixedHeightListView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseChart">
+        <attr name="egLegendHeight" format="dimension" />
+        <attr name="egLegendTextSize" format="dimension" />
+        <attr name="egAnimationTime" format="integer" />
+        <attr name="egShowDecimal" format="boolean" />
+        <attr name="egLegendColor" format="color" />
+        <attr name="egEmptyDataText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BarChart">
+
+    </declare-styleable>
+    <declare-styleable name="BaseBarChart">
+        <attr name="egShowValues" format="boolean" />
+        <attr name="egBarWidth" format="dimension" />
+        <attr name="egBarMargin" format="dimension" />
+        <attr name="egFixedBarWidth" format="boolean" />
+        <attr name="egEnableScroll" format="boolean" />
+        <attr name="egVisibleBars" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="VerticalBarChart">
+        <attr name="egUseMaximumValue" format="boolean" />
+        <attr name="egMaximumValue" format="dimension" />
+        <attr name="egValueUnit" format="string" />
+        <attr name="egShowBarLabel" format="boolean" />
+        <attr name="egBarLabelColor" format="color" />
+    </declare-styleable>
+</resources>
