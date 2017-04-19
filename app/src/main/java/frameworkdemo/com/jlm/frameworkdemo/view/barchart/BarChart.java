@@ -220,9 +220,8 @@ public class BarChart extends BaseBarChart {
             }
 
             /*画坐标轴*/
-            _Canvas.drawLine(0, 0, 0, mLegend.getTop()-80, mValuePaint);// y
-            _Canvas.drawLine(0, mLegend.getTop()-80, this.getRight(), mLegend.getTop()-80, mValuePaint);// x
-//            _Canvas.drawLine(0, 100, this.getWidth(), this.getHeight() - mLegend.getHeight()-1, mValuePaint);// x
+//            _Canvas.drawLine(0, 0, 0, mLegend.getTop(), mValuePaint);// y
+//            _Canvas.drawLine(0, mLegend.getTop()-2, this.getRight(), mLegend.getTop()-2, mValuePaint);// x
         }
     }
 

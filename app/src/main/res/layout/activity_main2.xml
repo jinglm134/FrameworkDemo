@@ -21,7 +21,7 @@
 
     <FrameLayout
         android:id="@+id/fragment_right"
-        android:layout_width="240dp"
+        android:layout_width="480dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:tag="END"

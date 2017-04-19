@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import frameworkdemo.com.jlm.frameworkdemo.R;
-import lecho.lib.hellocharts.view.ColumnChartView;
 
 /**
  * 车系分析

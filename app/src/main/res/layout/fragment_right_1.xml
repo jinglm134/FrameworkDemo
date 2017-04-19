@@ -15,7 +15,7 @@
 
     <frameworkdemo.com.jlm.frameworkdemo.view.barchart.BarChart
         android:id="@+id/barChat"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="240dp"
         android:padding="20dp"
         app:egFixedBarWidth="true"
@@ -26,9 +26,9 @@
         app:egLegendColor="@color/c1"
         app:egShowValues="false"/>
 
-    <lecho.lib.hellocharts.view.ColumnChartView
-        android:layout_marginTop="20dp"
-        android:id="@+id/columnChartView"
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
         android:layout_width="match_parent"
-        android:layout_height="240dp" />
+        android:layout_height="360dp"
+        />
 </LinearLayout>
