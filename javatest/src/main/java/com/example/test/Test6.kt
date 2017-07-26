@@ -1,6 +1,6 @@
 @file:Suppress("VARIABLE_WITH_REDUNDANT_INITIALIZER")
 
-package com.example
+package com.example.test
 
 /**
  * Created by jaylim on 2017/7/19.

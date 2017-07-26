@@ -1,4 +1,4 @@
-package com.example
+package com.example.test
 
 /**
  * Created by jaylim on 2017/7/19.
@@ -10,7 +10,7 @@ internal object Test4 {
     }
 
     fun jieChen(n: Int): Int {
-        this.num = n
+        num = n
         var sum = 1
         fun compeat(): Unit {
             sum *= num

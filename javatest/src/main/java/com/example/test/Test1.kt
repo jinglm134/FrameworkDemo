@@ -1,4 +1,4 @@
-package com.example
+package com.example.test
 
 internal object Test1 {
     @JvmStatic fun main(args: Array<out String>) {
