@@ -64,13 +64,13 @@ public class Main2Activity extends ActionBarActivity implements NavigationDrawer
 
     private void initView() {
         fragmentDataService = new FragmentDataService();
-        fragmentSeekCar =  new FragmentSeekCar();
+        fragmentSeekCar = new FragmentSeekCar();
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer);
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.fragment_menu);
 
-        mNavigationDrawerFragment.setup(R.id.fragment_menu,mDrawer);
+        mNavigationDrawerFragment.setup(R.id.fragment_menu, mDrawer);
 
         // 关闭手势滑动
         mDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, Gravity.END);

@@ -4,13 +4,13 @@ apply plugin: 'android-apt'
 apply plugin: 'com.dodola.rocoofix'
 
 android {
-    signingConfigs {
-        keystore_config {
-            storeFile file('F:/keystore/fed.keystore.jks')
-        }
-    }
+//    signingConfigs {
+//        keystore_config {
+//            storeFile file('F:/keystore/fed.keystore.jks')
+//        }
+//    }
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '27.0.1'
     defaultConfig {
         applicationId "frameworkdemo.com.jlm.frameworkdemo"
         minSdkVersion 19
@@ -26,7 +26,7 @@ android {
     buildTypes {
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -50,13 +50,13 @@ rocoo_fix {
 
 
 tasks.whenTaskAdded { task ->
-    if (task.name.equals("lint")) {
+    if (task.name == "lint") {
         task.enabled = false
     }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile  fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
@@ -73,12 +73,11 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.yanzhenjie:album:1.0.0'
     compile 'com.android.support:multidex:1.0.1'
-    compile 'com.android.support:support-v4:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.nineoldandroids:library:2.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    provided "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 repositories {
     mavenCentral()

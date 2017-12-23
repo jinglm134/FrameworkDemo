@@ -24,7 +24,6 @@
         android:layout_width="480dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
-        android:tag="END"
         android:clickable="true"
         android:background="@color/c12"/>
 
